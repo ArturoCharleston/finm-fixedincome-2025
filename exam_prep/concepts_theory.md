@@ -109,6 +109,64 @@ Dirty Price vs Clean Price
 Level, Slope, Curvature
 - PCA is good a discomposing the yields into 3 factors: Level, Slope, Curvature which explain almost 99% of the variation
 
+### Week 1 HW review
+
+Yield Curve vs Spot Curve
+- Main difference: Yield Curve any given point is pricing a particular treasury. The Spot curve is pricing for ANY cashflow in time. 
+- They are related, but there is not reason to say that they are related by construction
+- Can you use YTM as a discount rate? No, only if you are referring to that particular security. Or is we have no coupon treasuries
+
+- STRIPS are zero coupon bonds, but these are not issued by the treasury. However, there is a strip programs. The treasury keeps track of those, but they do not issue them 
+- Why we don't use STRIPS? Because there is not enough liquidity on those. That is a derivative product. 
+
+Spot curve
+- It is extremely important. It is as important as the risk free rate in portfolio. 
+- When you construct this, the more liquid instruments are more important and should be put more attention, instead of focussing on everything. You need to filter/ or to use Weighted Least Squares, the idea is to put more weight to those observations that you trust the most. In Nelson-Siegel, you can do weighted curve fitting.
+- OLS Method doesnt assign any particular structure, it DOES NOT need to be a curve, it can have values scattered all around. So firms DO NOT really use OLS because it has problems.
+- OLS is "non parametric", in the sense that you let the data speak. While Nelson-Siegel is "parametric" in the sense that you are making some assumptions about how the world behave. Nelson-Siegal requires good initial conditions, otherwise it does not converge. 
+
+- OLS you need to remove columns where nothing mature, but also need to remove to remove ANY security that paid on that date. Otherwise, your error will absorb this and the mean of the errors won't be zero. Note that we do not include an intercept, so it does not capture the mean. 
+- If you have 3 securities maturing the same day, you need to remove 2 of those to keep only one. 
+
+Bootstrapping
+- First filter is not subjective. Remove dates without maturities
+- Second filter is more subjective, what securities do you remove?
+
+- Expected Inflation: Take the yield curve without TIPS, and take the yield curve with TIPS only, then take the spread, and this should be the inflation expectation at a certain point in time about the inflation estimates at some year. 
+
+- The current Yield Curve does not have significant variation. Its range is .50 bps, while in other dates it was closely to 5bps. 
+
 
 ## Week 2
 
+Risk factors: In equities, it is the market factor. However, in fixed income, it is the interest rate LEVEL.
+Yields and discount rates are very interrelated. They do not change 1 by 1 but change similarly. However this is not by construction.
+
+- Why we don't calculate sensitivity using a linear regression/linear factor decomposition? Because we have some economic theory behind about their behavior, why should we waste so much statistical power if we already have some idea of its behavior? You have a lot of mathematical information, so why leaving it to the data to speak and waste statistical power. 
+
+- Your 2 year treasury, will be a one year treasury one year from now. And these relations are important and provide us information. 
+
+- Sensitivity: 
+$\frac{dP}{P} \approx -D\times dr + \frac{1}{2}C\times (dr)^2$
+
+where dr is a small change in the level of the spot curve, D is the duration (negative relationship with price and included as -D to make it positive), and C is the Convexity. 
+
+- Duration
+1. Refers to the sensitivity of a bond (or other fixed-income product) to the **level of interest rates**.
+2. Rather than measure sensitivity to the 3-month, 1-year, or 10-year rate, measure sensitivity to a parallel shift in all these rates, all else equal.
+3. $D \equiv -\frac{1}{P}\frac{dP}{dr}$
+4. Duration is a **percentage** change in the price, (via the $1/P$ term).
+5. We denote the parallel shift in the spot curve with $dr$
+6. The negative in the definition is so that the resulting duration will be a positive number. ($dP/dr$ is a negative number!)
+7. Treasuries with higher time to maturity are more sensitive to interest rate risk (change) because they have more time in the market. So it is more sensitive to interest rates. 
+8. Duration is the weighted average of the cashflow maturities (in a bond)
+9. Is the sensitivity of price to time.
+10. Duration is a time-varying metric, with a predictable path. 
+11. Coupons lower duration because you are getting paid part of the value of the treasury before. The relation depends on how high/low is the coupon. When coupon is low, then duration is very similar to time to maturity. When it is high, they differ significantly, and duration would be significantly lower. 
+12. Prices on a 30 year treasury are way more volatile than in a 1 year treasury and this is because of duration. 
+
+
+- Convexity
+1. Is not as interesting as duration. The action is in duration
+2. Is the second derivative of the price with respect to rates. Now we are not adding a minus, as in duration. 
+3. For a zero coupon bond, it is (T-t)^2, time to maturity squared
