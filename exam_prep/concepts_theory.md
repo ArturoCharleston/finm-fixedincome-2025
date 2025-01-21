@@ -170,3 +170,8 @@ where dr is a small change in the level of the spot curve, D is the duration (ne
 1. Is not as interesting as duration. The action is in duration
 2. Is the second derivative of the price with respect to rates. Now we are not adding a minus, as in duration. 
 3. For a zero coupon bond, it is (T-t)^2, time to maturity squared
+
+### Homework Week 2
+
+- Duration is presented in years (divide by 365.25)
+- Modified duration is Duration/(1+YTM/n), where n is the number of periods that pay a coupon.
