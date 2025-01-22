@@ -175,3 +175,20 @@ where dr is a small change in the level of the spot curve, D is the duration (ne
 
 - Duration is presented in years (divide by 365.25)
 - Modified duration is Duration/(1+YTM/n), where n is the number of periods that pay a coupon.
+
+
+
+## Week 3
+
+### HBS Case
+- The cheapest bond if the one with lowest Yield-To-Maturity, not lower price
+- The price is also lower for the bond because it was issued way before in time. The reason is not the time in an efficient market, the problem is that that bond might not be liquid because some pension fund want it and they don't want to trade it. 
+- The difference in YTM spreads is very small 35 bps, the think that make it interesting is LEVERAGE. 
+- They have 50x leverage, is it reasonable? Yes, because they use repo transactions for this. 
+- A repo is a transaction in which the counter party if obligated to buy it at a previously agreed price. The exposure is the one that is buying it back. You give 2 dollars to do the 100 dollars bond. 
+- To short the note they do a reverse repo.
+- We are balancing the DOLLAR duration
+- Does the spread need to converge? NO. Mathematically it should converge at maturity, but it doesn't need to converge all the time. This is a statistical analysis, hoping that it will converge. 
+- These are no paper lost, they are actual lost because the repos are overnight, so you need to put money EVERYDAY. Its like a margin account. And they will increase the haircuts given the moves of the markets. 
+- Small spreads in fixed income are important because you have a lot of access to leverage through repos. 
+- What explain these differences? Liquidity mainly, and that it is not a huge difference for asset managers, and banks in that time. It is for market makers. However, there was a lot of market maker money sitting. 
