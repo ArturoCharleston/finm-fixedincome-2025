@@ -192,3 +192,32 @@ where dr is a small change in the level of the spot curve, D is the duration (ne
 - These are no paper lost, they are actual lost because the repos are overnight, so you need to put money EVERYDAY. Its like a margin account. And they will increase the haircuts given the moves of the markets. 
 - Small spreads in fixed income are important because you have a lot of access to leverage through repos. 
 - What explain these differences? Liquidity mainly, and that it is not a huge difference for asset managers, and banks in that time. It is for market makers. However, there was a lot of market maker money sitting. 
+
+### Floating-Rate Notes (FRNs)
+- Floating-Rate Notes pays a coupon based on a particular variable short-term interest rate, $r$, as well as a pre-specified spread, $s$.
+- They do not change in price, at least not a lot (+0.2; - 0.2). 
+- They choosed a coupon rate of the 3 month LIBOR. And it pays every 3 months. So these are similar and they cancel each other (1+r)/(1+r). 
+- The changes are caused whenever there is a change in the interest rate in the period that the floating coupon is fixed (3 months). 
+- They do not have interest rate risk, very close to zero. Not exactly zero because interest rates can change in the 3 months period. 
+- The coupon actually reset every week. They are overwhelmingly owned by money market funds (90%). They act like a risk free rate.
+- The duration is going to 0.25 to zero, 0.25 to zero, etc. 
+
+
+### SWAPS
+- You can change floating interest rate to fixed interest rate. 
+- Why is the swap market so big given that it looks as a coincidence of two people wanting to change something?
+- There is not optionality. 
+- Thinks to define in a swap?
+1. Maturity and frequency, how many payments? When are they due? Now most swap annually
+2. Notional: On how much? What is the scale of the swap? 5% or how much? 1M?
+3. The value for each size is the accorded interest rate times the notional. That is why the gross market value is a fraction of the notional. 
+4. What is the floating rate fixed on? It is usually based on SOFR. But you need to decide in what is the floating based on?
+
+- The price of the swap is inbred in the interest rate that we agreed onto. In some sense the fix part of the swap is the market expectation of where the interest rate will be. 
+- You don't exchange money initially. So the price is already baked in the fixed interest rate agreed. But that info is only embedded in the date it was set up. The fixed rate will only tell you the expected interest rate at the date the swap was created. 
+- You can use it to hedge risk, or to speculate about SOFR position. 
+- Gross Market is a fraction of notional because it is only the payments. However, it is also big because you are cancelling positions by taking an opposite swap, instead of receiving floating rate, you get another swap in which you give floating rate and that is the way to cancel it. 
+- A swap is basically going long a floating interest rate, and short a fixed interest rate. So you can replicate it with a long and short position. Given that you can replicate them, you can simply take a long and short position, the difference is the price of the swap. 
+- A forward Rate agreement is a one time swap
+- A swap is a package of some forward rate agreements
+
