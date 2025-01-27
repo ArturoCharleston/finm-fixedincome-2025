@@ -176,6 +176,22 @@ where dr is a small change in the level of the spot curve, D is the duration (ne
 - Duration is presented in years (divide by 365.25)
 - Modified duration is Duration/(1+YTM/n), where n is the number of periods that pay a coupon.
 
+### HBS Fixed Income Arbitrage (A)
+
+- Two bonds with same maturity. One US treasury bond paying semi-annual coupon at 4.25% rate, maturing in Aug 2015. Other US Treasury bond paying semi annual coupon at 10.625 with same maturity date. 
+- Different yield between those two. Spread of 0.35% (35 bps/bips).
+- There can be differences in bonds of the same maturity when one is more liquid, and is more heavily traded that another. When one is "on the return" (recently sold by the treasury), and "off the run" traded for many years. 
+- He noticed that the spread was closed for a lot of time, but that recently the spread has reappeared. 
+- The PM buy the bond with the higher yield, and sell the bond with the lower yield. He makes money when the yields converged.
+- He bought quantity of the bonds such that the modified duration (elasticity of price with respect to yield), is hedged. He funded the trade by going short and long and borrowing the difference at a short term overnight rate which would add no duration. 
+- Duration hedge ratio: Duration long/duration short.  Then you sell duration ratio * number of long bonds (remember duration is negative).
+-  Long position: he would use some capital, and borrowed money, and give as a collateral the bonds he had purchased. This was done day by day in a repo agreement. US treasuries as collateral, then haircuts are short (2%) and 0.15% annual interest on the loan. 
+- Short position: Borrow from someone the bonds, then sell the borrowed and get cash, which would deposit as collateral with the prime broker. Broker required some additional amount of cash collateral (2%) and he would receive cash against its short bond position of 0.10%
+- Financing Risks
+1. Is this was hold to maturity, then it would be a riskless arbitrage. However, there are risks to hold till maturity and opportunity costs
+2. if the yield difference widened, the broker would require him to increase the collateral or close a portion of the trade to restore the loan-to-collateral ratio to 98%.
+3. The haircut could change if they think there is more risk now with the bonds and now they can charge 3%. 
+
 
 
 ## Week 3
@@ -221,3 +237,7 @@ where dr is a small change in the level of the spot curve, D is the duration (ne
 - A forward Rate agreement is a one time swap
 - A swap is a package of some forward rate agreements
 
+
+### HBS Fixed Income Arbitrage (C)
+- Swap spread between two interest rates, the rate on the fixed leg of a fixed-floating swap, and the yield on a treasury bond of comparable maturity. 
+- The swap was a thirty-year swap, so the relevant treasury bond was a 4.5 coupon bond due May 15, 2038.
